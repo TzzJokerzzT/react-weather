@@ -1,0 +1,214 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #74ebd5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+}
+
+.rain {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* background-image: url(https://pngimg.com/uploads/rain/rain_PNG13468.png); */
+  background-image: url(https://i.imgur.com/2iV0c0O.png);
+  background-size: cover;
+  background-position: center;
+  animation-delay: 5s;
+  z-index: -1;
+}
+
+.rain:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(https://pngimg.com/uploads/rain/rain_PNG13468.png); */
+  background-image: url(https://i.imgur.com/2iV0c0O.png);
+  animation: rain 0.4s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+    opacity: 1;
+  }
+
+  100% {
+    background-position: 8% 70%;
+    opacity: 0.6;
+  }
+}
+
+/*EFECTOS NUBE*/
+.cloud.one {
+  position: absolute;
+  top: 5em;
+  left: 5em;
+  z-index: -1;
+  -webkit-animation: moveCloud 15s linear infinite;
+  -moz-animation: moveCloud 15s linear infinite;
+  animation: moveCloud 15s linear infinite;
+
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  transform: scale(0.7);
+}
+.cloud.two {
+  position: absolute;
+  left: 80em;
+  top: 20em;
+  z-index: -1;
+  -webkit-animation: moveCloud 25s infinite linear;
+  -moz-animation: moveCloud 25s infinite linear;
+  animation: moveCloud 25s infinite linear;
+
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.cloud-body {
+  position: absolute;
+  top: 10em;
+  background: #ffffff;
+  box-shadow: inset 0 0.3em 0.5em lightyellow, 0 0 0.5em #ffffff;
+  height: 9em;
+  width: 30em;
+  border-radius: 10em;
+}
+.cloud-top {
+  position: absolute;
+  top: 4em;
+  left: 3em;
+  background: #ffffff;
+  box-shadow: inset 0 0.3em 0.5em lightyellow, 0 0 0.5em #ffffff;
+  height: 13em;
+  width: 12em;
+  border-radius: 10em 10em 10% 30%;
+}
+.cloud-puff {
+  position: absolute;
+  top: 6em;
+  left: 11em;
+  background: #ffffff;
+  box-shadow: inset 0 0.3em 0.5em lightyellow, 0 0 0.5em #ffffff;
+  height: 12em;
+  width: 12em;
+  border-radius: 50%;
+}
+
+/*Cloud Animation*/
+@-webkit-keyframes moveCloud {
+  0% {
+    left: -25em;
+  }
+  100% {
+    left: 50em;
+  }
+}
+
+@-moz-keyframes moveCloud {
+  0% {
+    left: -25em;
+  }
+  100% {
+    left: 50em;
+  }
+}
+
+@keyframes moveCloud {
+  0% {
+    left: -25em;
+  }
+  100% {
+    left: 100em;
+  }
+}
+
+/* EFECTOS DEL SOL */
+.sun-rays {
+  position: absolute;
+  bottom: 42em;
+  right: 3em;
+  height: 15em;
+  width: 15em;
+  z-index: -1;
+  background: radial-gradient(
+    rgba(255, 237, 175, 0.8) 50%,
+    rgba(255, 237, 175, 0.2) 70%
+  );
+  border-radius: 50%;
+  box-shadow: 0 0 0.5em rgba(255, 237, 175, 1);
+  -webkit-animation: rays 10s infinite;
+  -moz-animation: rays 10s infinite;
+  animation: rays 10s infinite;
+}
+
+.sun {
+  position: absolute;
+  bottom: 44.5em;
+  right: 5.5em;
+  height: 10em;
+  width: 10em;
+  z-index: -1;
+  background: rgba(255, 237, 175, 1);
+  border-radius: 50%;
+  box-shadow: 0 0 1em rgba(255, 237, 175, 0.5), inset 0 0 0.5em #ffffad;
+}
+
+@-webkit-keyframes rays {
+  0% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@-moz-keyframes rays {
+  0% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rays {
+  0% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
