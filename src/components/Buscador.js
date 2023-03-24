@@ -13,18 +13,26 @@ export default class Buscador extends Component {
     const { search } = this.state;
     return (
       <div style={{ gridArea: "Buscador", textAlign: "center" }}>
-        <input
-          onChange={this.handleChange}
-          style={{ height: "80%" }}
-          type="text"
-        ></input>
-        <Button
-          variant="contained"
-          size="small"
-          onClick={() => handlerSearch(search)}
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handlerSearch(search);
+          }}
         >
-          Buscar
-        </Button>
+          <input
+            onChange={this.handleChange}
+            style={{ height: "80%" }}
+            name="search"
+            type="text"
+          ></input>
+          <Button
+            variant="contained"
+            size="small"
+            onClick={() => handlerSearch(search)}
+          >
+            Buscar
+          </Button>
+        </form>
       </div>
     );
   }
